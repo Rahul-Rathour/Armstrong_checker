@@ -5,7 +5,7 @@ const GlobalNumbers = () => {
 
   const fetchGlobal = async () => {
     try {
-      const res = await fetch("http://localhost:4567/global_numbers");
+      const res = await fetch(`${process.env.REACT_APP_BASES_URL}/global_numbers`);
       const data = await res.json();
       setSubmissions(data.global_submissions || []);
     } catch (error) {

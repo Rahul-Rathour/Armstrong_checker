@@ -10,7 +10,7 @@ const LoginForm = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:4567/login", {
+    const res = await fetch(`${process.env.REACT_APP_BASES_URL}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -73,7 +73,10 @@ const LoginForm = () => {
         {/* Extra */}
         <p className="text-sm text-center text-gray-600 mt-6">
           Don’t have an account?{" "}
-          <span className="text-blue-600 font-medium hover:underline cursor-pointer">
+          <span
+            onClick={() => navigate("/")}
+            className="text-blue-600 font-medium hover:underline cursor-pointer"
+          >
             Register
           </span>
         </p>

@@ -15,7 +15,7 @@ const MyNumbers = () => {
 
   const fetchMyNumbers = async (email) => {
     try {
-      const res = await axios.post("http://localhost:4567/my_numbers", { email });
+      const res = await axios.post(`${process.env.REACT_APP_BASES_URL}/my_numbers`, { email });
       if (res.data.outputs) {
         setOutputs(res.data.outputs);
       } else {

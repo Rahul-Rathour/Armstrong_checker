@@ -21,7 +21,7 @@ const SubmitForm = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:4567/submit", {
+      const res = await axios.post(`${process.env.REACT_APP_BASES_URL}/submit`, {
         email,
         number: parseInt(number),
       });

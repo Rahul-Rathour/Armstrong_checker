@@ -29,7 +29,7 @@ const RegisterForm = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:4567/register", {
+      const res = await axios.post(`${process.env.REACT_APP_BASES_URL}/register`, {
         email,
         password,
       });
