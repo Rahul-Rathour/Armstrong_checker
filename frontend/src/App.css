@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+input {
+  margin: 5px;
+  padding: 8px;
+  width: calc(100% - 20px);
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #007bfc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005ec0;
+}
