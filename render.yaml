@@ -3,7 +3,7 @@ services:
     name: ruby-backend
     env: ruby
     plan: free
-    buildCommand: "bundle install"
-    startCommand: "ruby app.rb"
     rootDir: backend
+    buildCommand: "bundle install"
+    startCommand: "bundle exec ruby app.rb"
     autoDeploy: true
